@@ -5,7 +5,7 @@
 head ([H|_]) ->
     H.
 
-%% funtion to test if two values passed are same or not. (uses function clauses).
+%% function to test if two values passed are same or not. (uses function clauses).
 same (X, X) ->
     true;
 same (_, _) ->
