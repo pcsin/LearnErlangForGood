@@ -63,3 +63,13 @@ sublist ([], _, Acc) ->
     Acc;
 sublist ([H|T], N, Acc) ->
     sublist (T, N - 1, [H | Acc]).
+
+zip (L1, L2) ->
+    zip (L1, L2, []).
+
+zip ([], _, Acc) ->
+    reverse (Acc);
+zip (_, [], Acc) ->
+    reverse (Acc);
+zip ([H1|T1], [H2|T2], Acc) ->
+    zip (T1, T2, [{H1, H2} | Acc]).
