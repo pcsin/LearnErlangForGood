@@ -6,7 +6,7 @@ read(N) ->
          {error, no_float} -> list_to_integer (N);
          {F, _} -> F    
     end.
-
+%% example usage rpn: fold (string: tokens ("5 5 +"), fun rpn: accumulate/2, []).
 fold ([], _F, Start) ->
     Start;
 fold ([H|T], F, Start) ->
