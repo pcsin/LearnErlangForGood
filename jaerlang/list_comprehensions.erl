@@ -16,3 +16,8 @@ seq(S, N) ->
 
 pythagorean(N) ->
     [{ A, B, C } || A <- seq(1, N), B <- seq(1, N), C <- seq(1, N), A + B > C, A + C > B, B + C > A, A*A + B*B =:= C*C].
+
+anagrams([]) ->
+    [[]];
+anagrams(L) ->
+    [ [A|X] || A <- L, X <- anagrams(L -- [A])].
