@@ -49,5 +49,3 @@ take_block(A, [{ _, [A]} | T], Acc, false) ->
     take_block(A, T, Acc, true);
 take_block(A, [{X, Y} | T], Acc, false) ->
     take_block(A, T, Acc ++ [{X, Y}], false).
-
-
