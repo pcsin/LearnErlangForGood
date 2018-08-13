@@ -1,2 +1,2 @@
 # LearnErlangForGood
-source code while learning erlang
+- source code while learning erlang
